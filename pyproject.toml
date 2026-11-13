@@ -1,0 +1,8 @@
+[tool.poe.tasks.scrape]
+cmd = "python collection/oddsportal_opening_odds.py --season ${season} --limit ${limit} --${headed}"
+args = [
+    { name = "season", positional = true, default = "2025-2026" },
+    { name = "limit", positional = true, default = "50", type = "integer" },
+    { name = "headed", type = "boolean", default = false, true_string = "--headed", false_string = "" }]
+[tool.poe.tasks.train]
+cmd = "python processing/train_bookmaker_model.py premier_league_opening_odds --model-out bookmaker_model.joblib"
