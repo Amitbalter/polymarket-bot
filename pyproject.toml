@@ -1,5 +1,5 @@
 [tool.poe.tasks.scrape]
-cmd = "python collection/oddsportal_opening_odds.py --season ${season} --limit ${limit} --${headed}"
+cmd = "python collection/oddsportal_opening_odds.py --season ${season} --limit ${limit} ${headed}"
 args = [
     { name = "season", positional = true, default = "2025-2026" },
     { name = "limit", positional = true, default = "50", type = "integer" },
