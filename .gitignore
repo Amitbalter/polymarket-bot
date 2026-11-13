@@ -2,3 +2,8 @@
 data/
 *.parquet
 *.csv
+*.sqlite3
+*.pyc
+*.joblib
+*.png
+launch.json
